@@ -71,10 +71,12 @@ export default function Home() {
 
   function shareOnLinkedIn() {
     console.log(content);
-    window.open(
-      `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`,
-      "_blank"
-    );
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(content)}`;
+    window.open(linkedInUrl, "_blank");
+    // window.open(
+    //   `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`,
+    //   "_blank"
+    // );
   }
 
   return (
