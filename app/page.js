@@ -69,41 +69,41 @@ export default function Home() {
     }
   }, [isAllAnswersFilled, generateContent]);
 
-  function shareOnLinkedIn() {
-    console.log(content, "kkk");
-    window.open(
-      `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`,
-      "_blank"
-    );
-  }
-
   // function shareOnLinkedIn() {
-  //   const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`;
-  //   const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(content)}`;
-
-  //   // Function to detect mobile OS
-  //   function isMobile() {
-  //     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  //     // iOS detection
-  //     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-  //       return "iOS";
-  //     }
-  //     // Android detection
-  //     if (/android/i.test(userAgent)) {
-  //       return "Android";
-  //     }
-  //     // Other cases are considered desktop
-  //     return "Desktop";
-  //   }
-  //   const deviceType = isMobile();
-  //   if (deviceType === "iOS" || deviceType === "Android") {
-  //     // Redirect to LinkedIn app on mobile devices
-  //     window.location.href = linkedInAppUrl;
-  //   } else {
-  //     // Open LinkedIn web sharing for desktop or unsupported devices
-  //     window.open(linkedInWebUrl, "_blank");
-  //   }
+  //   console.log(content, "kkk");
+  //   window.open(
+  //     `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`,
+  //     "_blank"
+  //   );
   // }
+
+  function shareOnLinkedIn() {
+    const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`;
+    const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(content)}`;
+
+    // Function to detect mobile OS
+    function isMobile() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      // iOS detection
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+      }
+      // Android detection
+      if (/android/i.test(userAgent)) {
+        return "Android";
+      }
+      // Other cases are considered desktop
+      return "Desktop";
+    }
+    const deviceType = isMobile();
+    if (deviceType === "iOS" || deviceType === "Android") {
+      // Redirect to LinkedIn app on mobile devices
+      window.location.href = linkedInAppUrl;
+    } else {
+      // Open LinkedIn web sharing for desktop or unsupported devices
+      window.open(linkedInWebUrl, "_blank");
+    }
+  }
 
 
   return (
