@@ -79,22 +79,32 @@ export default function Home() {
   //   window.location.href = linkedInUrl;
   // }
 
-  function shareOnLinkedIn(content) {
+  function shareOnLinkedIn() {
     const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`;
     const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(content)}`;
 
-    // Try to open LinkedIn app, but fallback to web if unsuccessful
-    const timeout = setTimeout(() => {
-      window.open(linkedInWebUrl, "_blank"); // Fallback to web
-    }, 1500);
-
-    // Attempt to open the LinkedIn app
-    window.location.href = linkedInAppUrl;
-
-    // Clear the timeout if the app opens successfully
-    window.addEventListener('blur', () => {
-      clearTimeout(timeout);
-    });
+    // Function to detect mobile OS
+    function isMobile() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      // iOS detection
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+      }
+      // Android detection
+      if (/android/i.test(userAgent)) {
+        return "Android";
+      }
+      // Other cases are considered desktop
+      return "Desktop";
+    }
+    const deviceType = isMobile();
+    if (deviceType === "iOS" || deviceType === "Android") {
+      // Redirect to LinkedIn app on mobile devices
+      window.location.href = linkedInAppUrl;
+    } else {
+      // Open LinkedIn web sharing for desktop or unsupported devices
+      window.open(linkedInWebUrl, "_blank");
+    }
   }
 
 
