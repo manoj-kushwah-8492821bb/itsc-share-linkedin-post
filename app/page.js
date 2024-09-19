@@ -77,9 +77,30 @@ export default function Home() {
   //   );
   // }
 
-  function shareOnLinkedIn() {
+ function shareOnLinkedIn() {
+    const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`
     const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&text=${encodeURIComponent(content)}`;
-    window.open(linkedInWebUrl, "_blank");
+
+    function isMobile() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      // iOS detection
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+      }
+      // Android detection
+      if (/android/i.test(userAgent)) {
+        return "Android";
+      }
+      // Other cases are considered desktop
+      return "Desktop";
+    }
+
+    const deviceType = isMobile();
+    if (deviceType === "iOS") {
+      window.location.href = linkedInAppUrl;
+    } else {
+      window.open(linkedInWebUrl, "_blank");
+    }
   }
 
 
