@@ -69,15 +69,34 @@ export default function Home() {
     }
   }, [isAllAnswersFilled, generateContent]);
 
-  function shareOnLinkedIn() {
-    console.log(content);
-    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(content)}`;
-    window.open(linkedInUrl, "_blank");
-    // window.open(
-    //   `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`,
-    //   "_blank"
-    // );
+  // function shareOnLinkedIn() {
+  //   console.log(content,"kkk");
+  //   const linkedInUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`
+  //   // window.open(
+  //   //   `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`,
+  //   //   "_blank"
+  //   // );
+  //   window.location.href = linkedInUrl;
+  // }
+
+  function shareOnLinkedIn(content) {
+    const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`;
+    const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(content)}`;
+
+    // Try to open LinkedIn app, but fallback to web if unsuccessful
+    const timeout = setTimeout(() => {
+      window.open(linkedInWebUrl, "_blank"); // Fallback to web
+    }, 1500);
+
+    // Attempt to open the LinkedIn app
+    window.location.href = linkedInAppUrl;
+
+    // Clear the timeout if the app opens successfully
+    window.addEventListener('blur', () => {
+      clearTimeout(timeout);
+    });
   }
+
 
   return (
     <div className="p-2">
