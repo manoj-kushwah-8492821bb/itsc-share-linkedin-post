@@ -78,9 +78,7 @@ export default function Home() {
   // }
 
   function shareOnLinkedIn() {
-    const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`;
     const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&text=${encodeURIComponent(content)}`;
-    window.location.href = linkedInAppUrl;
     window.open(linkedInWebUrl, "_blank");
   }
 
