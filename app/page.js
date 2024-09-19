@@ -78,30 +78,11 @@ export default function Home() {
   // }
 
   function shareOnLinkedIn() {
+    console.log(content);
     const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`;
     const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(content)}`;
 
-    // Function to detect mobile OS
-    // function isMobile() {
-    //   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    //   // iOS detection
-    //   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    //     return "iOS";
-    //   }
-    //   // Android detection
-    //   if (/android/i.test(userAgent)) {
-    //     return "Android";
-    //   }
-    //   // Other cases are considered desktop
-    //   return "Desktop";
-    // }
-    // const deviceType = isMobile();
-    // if (deviceType === "iOS" || deviceType === "Android") {
-    //   // Redirect to LinkedIn app on mobile devices
-    // } else {
-    //   // Open LinkedIn web sharing for desktop or unsupported devices
-    // }
-    window.location.href = linkedInAppUrl;
+    // window.location.href = linkedInAppUrl;
     window.open(linkedInWebUrl, "_blank");
   }
 
