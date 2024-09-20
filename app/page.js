@@ -77,9 +77,10 @@ export default function Home() {
   //   );
   // }
 
- function shareOnLinkedIn() {
-    const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(content)}`
-    const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&text=${encodeURIComponent(content)}`;
+  function shareOnLinkedIn() {
+    const feed = content + "\n" + "@kunaltomar1977 hashtag#ITSC hashtag#ITSCBhopalChapter hashtag#Networking hashtag#ITSalesCommunity hashtag#Growth hashtag#Leadership hashtag#Learning"
+    const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(feed)}`
+    const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&text=${encodeURIComponent(feed)}`;
 
     function isMobile() {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
