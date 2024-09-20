@@ -23,12 +23,12 @@ export default function Home() {
         options: ["yes", "no"],
       },
       {
-        question: "Why did you joined IT Sales Community?",
+        question: "Why did you joined IT Sales Community Bhopal?",
         name: "q2",
         options: ["networking", "learning", "opportunities"],
       },
       {
-        question: "Are you excited about today's talks?",
+        question: "Are you excited about today's talks with Kunal Tomar?",
         name: "q3",
         options: ["yes", "no"],
       },
@@ -78,7 +78,7 @@ export default function Home() {
   // }
 
   function shareOnLinkedIn() {
-    const feed = content + "\n" + "@kunaltomar1977 #ITSC #ITSCBhopalChapter #Networking #ITSalesCommunity #Growth #Leadership #Learning"
+    const feed = content + "\n\n" + "@kunaltomar1977 #ITSC #ITSCBhopalChapter #Networking #ITSalesCommunity #Growth #Leadership #Learning"
     const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(feed)}`
     const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&text=${encodeURIComponent(feed)}`;
 
