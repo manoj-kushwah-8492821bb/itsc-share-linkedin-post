@@ -78,7 +78,7 @@ export default function Home() {
   // }
 
   function shareOnLinkedIn() {
-    const feed = content + "\n" + "@kunaltomar1977 hashtag#ITSC hashtag#ITSCBhopalChapter hashtag#Networking hashtag#ITSalesCommunity hashtag#Growth hashtag#Leadership hashtag#Learning"
+    const feed = content + "\n" + "@kunaltomar1977 #ITSC #ITSCBhopalChapter #Networking #ITSalesCommunity #Growth #Leadership #Learning"
     const linkedInAppUrl = `linkedin://share?shareActive=true&text=${encodeURIComponent(feed)}`
     const linkedInWebUrl = `https://www.linkedin.com/shareArticle?mini=true&text=${encodeURIComponent(feed)}`;
 
