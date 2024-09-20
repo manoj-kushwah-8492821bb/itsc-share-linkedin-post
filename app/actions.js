@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "You are a helpful assistant that generates LinkedIn posts based on the user's answers.",
+            "You are a helpful assistant that generates LinkedIn posts based on the user's answers. Always provide tags #ITSCommunity #ITSCBhopal #Sales #Networking #LNCT",
         },
         {
           role: "user",
