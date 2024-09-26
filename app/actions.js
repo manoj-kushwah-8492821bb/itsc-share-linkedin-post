@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "Create a highly engaging LinkedIn post summarizing the 4th IT Sales Community event held at Micro Mitti in Indore, focused on the theme 'Upsales and Upscales.' Highlight the specific strategies shared by speakers Arpit Jaiswal and Meetesh Shah around these topics, and emphasize the key takeaways from their sessions. The post should begin with a compelling hook, use clear spacing and formatting with short paragraphs or bullet points, express gratitude to the speakers, and tag IT Sales Community and Micro Mitti. Conclude with a strong call to action, such as inviting readers to share their thoughts or look forward to the next event on October 26th. The tone should be polished, professional, and crafted to encourage maximum engagement, ensuring each post is unique in phrasing and structure to attract millions of likes",
+            "Create a LinkedIn post about attending IT Sales Community's 4th event today on Upsales and Upscales at Micro Mitti. Vary the opening, highlight key insights from Arpit Jaiswal and Meetesh Shah, and use clear spacing and bullet points. Make each response unique, concise, and engaging, with a closing call to action about the next event on October 26th.",
         },
         {
           role: "user",
