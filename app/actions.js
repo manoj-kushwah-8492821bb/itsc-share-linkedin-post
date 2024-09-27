@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "Generate a social media post announcing excitement for attending an upcoming IT Sales Community event in Indore at MicroMitti. The post should include an enthusiastic tone, mention the event being the 4th of its kind, highlight anticipation for discussions on Upsells and Upskills, and express eagerness to network with industry leaders. Use hashtags #ITSalesCommunity and #MicroMitti, and include a relevant emoji to enhance engagement"
+            "Generate a brief social media post, around 20 words, expressing excitement for the 4th #ITSalesCommunity event at #MicroMitti. Mention anticipation for discussions on Upsells and Upskills and networking with industry leaders. Use one emoji to enhance the message."
         },
         {
           role: "user",
