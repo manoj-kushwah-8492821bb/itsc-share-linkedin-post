@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "After scanning the QR code, automatically redirect the user to LinkedIn with the following message pre-filled in the post box: Excited to be attending the 4th #ITSalesCommunity event in Indore at #MicroMitti! Looking forward to insightful discussions on Upsells and Upskills and networking with industry leaders"
+            "Generate this exact text with no changes: Excited to be attending the 4th #ITSalesCommunity event in Indore at #MicroMitti! Looking forward to insightful discussions on Upsells and Upskills and networking with industry leaders."
         },
         {
           role: "user",
