@@ -23,12 +23,12 @@ export default function Home() {
         options: ["yes", "no"],
       },
       {
-        question: "Why did you joined IT Sales Community Bhopal?",
+        question: "Why did you joined the IT Sales Community Indore?",
         name: "q2",
         options: ["networking", "learning", "opportunities"],
       },
       {
-        question: "Are you excited about today's talks with Kunal Tomar?",
+        question: "Are you excited about today's talks with Arpit Jaiswal and Meetesh Shah?",
         name: "q3",
         options: ["yes", "no"],
       },
