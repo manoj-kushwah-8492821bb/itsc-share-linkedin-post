@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "Generate this exact text with no changes and no emojis and emoticons: Excited to be attending the 4th #ITSalesCommunity event in Indore at #MicroMitti! Looking forward to insightful discussions on Upsells and Upskills and networking with industry leaders."
+            "Generate this exact text with no changes: Excited to be attending the 4th #ITSalesCommunity event in Indore at #MicroMitti! Looking forward to insightful discussions on Upsells and Upskills and networking with industry leaders."
         },
         {
           role: "user",
