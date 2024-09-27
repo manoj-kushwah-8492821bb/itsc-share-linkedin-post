@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "Create a LinkedIn post about attending IT Sales Community's 4th event today on Upsales and Upscales at Micro Mitti. Vary the opening, highlight key insights from Arpit Jaiswal and Meetesh Shah, and use clear spacing and bullet points. Make each response unique, concise, and engaging, with a closing call to action about the next event on October 26th.",
+            "Generate a social media post announcing excitement for attending an upcoming IT Sales Community event in Indore at MicroMitti. The post should include an enthusiastic tone, mention the event being the 4th of its kind, highlight anticipation for discussions on Upsells and Upskills, and express eagerness to network with industry leaders. Use hashtags #ITSalesCommunity and #MicroMitti, and include a relevant emoji to enhance engagement"
         },
         {
           role: "user",
