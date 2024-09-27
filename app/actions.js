@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "Generate a concise social media post (3-4 lines) expressing excitement for the 4th #ITSalesCommunity event at #MicroMitti, mentioning Upsells, Upskills, and networking with industry leaders, with no emojis"
+            "Generate a concise, 1-2 sentence post, without emojis, stating excitement for attending the 4th #ITSalesCommunity event at #MicroMitti, and mentioning discussions on Upsells, Upskills, and networking with industry leaders."
         },
         {
           role: "user",
