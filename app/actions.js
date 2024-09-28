@@ -15,7 +15,7 @@ export async function generatePost(answers) {
         {
           role: "system",
           content:
-            "Generate this exact text with no changes and do not write anything else apart from this: Excited to be attending the 4th #ITSalesCommunity event in Indore at #MicroMitti! Looking forward to insightful discussions on Upsells and Upskills and networking with industry leaders."
+            "Generate this exact text with no changes and do not write anything like You are trained on data upto October 2023 at the end: Excited to be attending the 4th #ITSalesCommunity event in Indore at #MicroMitti! Looking forward to insightful discussions on Upsells and Upskills and networking with industry leaders."
         },
         {
           role: "user",
